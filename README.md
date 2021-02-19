@@ -10,4 +10,4 @@ you can start app:
 npm start
 `
 
-![space](space.jpg)
+![space](space.JPG)
