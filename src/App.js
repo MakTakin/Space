@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import background from './images/background.png'
+import bgMobile from './images/bgMobile.png'
+import Navbar from './components/navbar/navbar';
+import Main from './components/main/main';
+
+const Background = styled.div`
+    background-image: url(${background});
+    height: 100vh;
+    background-position-x: center;
+    background-size: cover;
+    
+    @media (max-width: 1199px) {
+        background-image: url(${bgMobile});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        height: auto;
+    }
+`
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Background>
+                <Navbar/>
+                <Main/>
+        </Background>
+    );
 }
 
 export default App;
