@@ -20,11 +20,10 @@ const ModalWindow = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-content: center;
-        
-    };
+    }
 `
 
-const Modal = ({modal, setModal, menuItems}) => {
+const Mobile = ({modal, setModal, menuItems}) => {
     const closeModal = (event) => {
         if (event.target.id == 'close') {
             setModal(!modal)
@@ -36,4 +35,4 @@ const Modal = ({modal, setModal, menuItems}) => {
         </ModalWindow>
     )
 }
-export default Modal
+export default Mobile

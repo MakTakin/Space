@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import SandwichMenu from './sandwichMenu/sandwichMenu'
+import Sandwich from './sandwich/sandwich'
 import { MenuLink } from '../../ui/link';
 
 const NavMenu = styled.div`
@@ -8,22 +8,22 @@ const NavMenu = styled.div`
     
     @media(max-width: 1199px) {
         margin-right:20px;
-    };
+    }
     
     @media(max-width: 990px) {
         display: none;
-    };
+    }
 `
 
 const Menu = () => {
-    const [menu, setMenu] = useState([
+    const menu = [
         'Главная',
         'Технология',
         'График полетов',
         'Гарантия',
         'О компании',
         'Контакты'
-    ])
+    ]
     const MenuItems = menu.map((item, i) => {
         return (
             <MenuLink to='/' key={i}>
@@ -37,7 +37,7 @@ const Menu = () => {
             <NavMenu>
                 {MenuItems}
             </NavMenu>
-            <SandwichMenu menuItems={MenuItems}/>
+            <Sandwich menuItems={MenuItems}/>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const AdvantagesFlex = styled.div`
@@ -22,40 +22,63 @@ const Advantage = styled.div`
     background: linear-gradient(135deg, rgb(255, 255, 255, -1) 19%, rgb(167, 167, 167, 0.02));
     text-align: center;
     width: 185px;
-
-    > div {
-        font-size: 60px;
-        font-weight: bold;
-        > span {
-            font-size: 18px;
-            font-weight: regular;
-        }
-    }
-    &:hover {
+    
+    &::hover {
         background: linear-gradient(135deg, rgb(255, 255, 255, -1) 19%, rgb(167, 167, 167, 0.1));
     }
-    
+
     @media (max-width: 480px) {
         width: 150px;
         font-size: 16px;
-        > div {
+    }
+`
+
+const AdvantageDiv = styled.div`
+    font-size: 60px;
+    font-weight: bold;
+    
+    @media (max-width: 480px) {
         font-size: 40px;
-            > span {
-                font-size: 16px;
-        }
     }
 `
 
 const Advantages = () => {
-    const [text, setText] = useState([
-        `мы <div>1</div> на рынке`,
-        `гарантируем <div>50%</div> безопасность`,
-        `календарик за <div>2001<span>г.<span/></div> в подарок`,
-        `путешествие <div>597</div> дней`
-    ])
+    const text = [
+        {
+            header: 'мы',
+            main: '1',
+            footer: 'на рынке'
+        },
+        {
+            header: 'гарантируем',
+            main: '50%',
+            footer: 'безопасность'
+        },
+        {
+            header: 'календарик за',
+            main: '2001г.',
+            footer: 'на рынке'
+        },
+        {
+            header: 'путешествие',
+            main: '597',
+            footer: 'дней'
+        }
+    ]
 
-    const AdvantagesItems = text.map((item, i) =>
-          <Advantage key={i} dangerouslySetInnerHTML={{ __html: item }}/>)
+    const AdvantagesItems = text.map((item, i) => {
+        return (
+            <Advantage>
+                {item.header}
+                <AdvantageDiv>
+                    {item.main}
+                </AdvantageDiv>
+                {item.footer}
+            </Advantage>
+
+        )
+    })
+
 
     return (
         <AdvantagesFlex>

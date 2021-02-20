@@ -7,13 +7,15 @@ export const MenuLink = styled(Link)`
     margin-left: 40px;
     font-family: 'MuseoSansLight';
     cursor: pointer;
+    
     &:hover {
         color: #b1b1b1;
         text-decoration: underline;
     }
+    
     @media(max-width: 1199px) {
         margin-left: 20px;
-    };
+    }
 `
 
 export const LogoLink = styled(Link)`
@@ -23,8 +25,8 @@ export const LogoLink = styled(Link)`
     position: relative;
     border: 1px solid white;
   
-    &:before, 
-    &:after {
+    &::before, 
+    &::after {
         content: "";
         display: block;
         position: absolute;
@@ -34,13 +36,14 @@ export const LogoLink = styled(Link)`
         transform: translate(-50%, -50%);
         transform-origin: 50% 50%;
     }
-    &:before {
+    
+    &::before {
         width: 100%;
         height: 80%;
         border-right: 1px solid #303033;
         border-left: 1px solid #303033;
     }
-    &:after {
+    &::after {
         height: 100%;
         width: 90%;
         border-top: 1px solid #303033;
@@ -49,5 +52,5 @@ export const LogoLink = styled(Link)`
     
     @media(max-width: 480px) {
         padding: 25px 0 40px 10px;
-    };
+    }
 `

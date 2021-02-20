@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Modal from './modal/modal';
-import menu from '../../../../images/menu.png'
-import close from '../../../../images/close.png'
+import Mobile from './mobile/mobile';
+import menu from '../../../../assets/images/menu.png'
+import close from '../../../../assets/images/close.png'
 
 const TabletsMenu = styled.div`
     cursor: pointer;
     
     @media(min-width: 990px) {
         display: none;
-    };
+    }
     
     @media(max-width: 990px) {
         display: flex;
         margin-right: 20px;
-    };
+    }
 `
 
-const SandwichMenu = ({menuItems}) => {
+const Sandwich = ({menuItems}) => {
     const [modal, setModal] = useState(false)
 
     const openMenu = () => {
@@ -33,7 +33,7 @@ const SandwichMenu = ({menuItems}) => {
                 }
             </TabletsMenu>
             { modal &&
-                <Modal
+                <Mobile
                     modal={modal}
                     setModal={setModal}
                     menuItems={menuItems}
@@ -42,4 +42,4 @@ const SandwichMenu = ({menuItems}) => {
         </>
     )
 }
-export default SandwichMenu
+export default Sandwich

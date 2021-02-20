@@ -7,25 +7,26 @@ const TravelText = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #ff4106;
-    font-size: 48px;
-    > div {
-        font-size: 24px;
-    }
-    > h1 {
-        font-size: 48px;
-        margin: 0;
-    }
     
     @media (min-width: 1199px) {
         display: none;
     }
 `
 
+const TravelH1 = styled.h1`
+    font-size: 48px;
+    margin: 0;
+`
+
+const TravelDiv = styled.div`
+    font-size: 24px;
+`
+
 const Travel = () => {
     return (
         <TravelText>
-            <h1>Путешествие</h1>
-            <div>на красную планету</div>
+            <TravelH1>Путешествие</TravelH1>
+            <TravelDiv>на красную планету</TravelDiv>
         </TravelText>
     )
 }

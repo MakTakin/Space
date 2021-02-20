@@ -1,8 +1,8 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with Space App
 
 Main page space app.
+
+![space](src/assets/images/space.JPG)
 
 you can start app:
 
@@ -10,4 +10,6 @@ you can start app:
 npm start
 `
 
-![space](space.JPG)
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -12,7 +12,7 @@ const MainScreen = styled.div`
     
     @media(max-width: 1199px) {
         flex-direction: column;
-    };
+    }
 `
 
 const LeftMainItem = styled.div`
@@ -21,7 +21,7 @@ const LeftMainItem = styled.div`
       
     @media(max-width: 1199px) {
         flex-direction: column;
-    };
+    }
 `
 
 const Main = () => {

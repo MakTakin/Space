@@ -1,6 +1,6 @@
 import React from 'react'
 import { LogoLink } from '../../ui/link';
-import logo from '../../../images/logo.png'
+import logo from '../../../assets/images/logo.png'
 
 const Logo = () => {
     return (
