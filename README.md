@@ -2,8 +2,6 @@
 
 Main page space app.
 
-You can see this project here: [JustSpace](https://todolist-280a1.web.app/)
-
 ![space](src/assets/images/space.JPG)
 
 you can start app:
